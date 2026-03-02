@@ -444,7 +444,8 @@
       <!-- Collapsible form panel -->
       <div class="eoi-collapse" id="eoi-collapse" aria-hidden="true">
 
-        <form class="eoi-form" id="eoi-form" action="https://formspree.io/f/mvzbnyaa" method="POST">
+        <form class="eoi-form" id="eoi-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="03b87c00-3aff-4096-859a-39021b20fe11" />
 
           <div class="eoi-row">
             <label class="eoi-label" for="eoi-name">Name <span class="eoi-required" aria-hidden="true">*</span></label>
@@ -510,7 +511,9 @@
           </div>
 
           <!-- Honeypot — hidden from humans, catches bots -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="h-captcha" data-captcha="true"></div>
 
           <div class="eoi-actions">
             <button type="submit" class="btn btn-gold" id="eoi-submit">
@@ -568,6 +571,7 @@
     </div>
   </footer>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="script.js"></script>
 </body>
 </html>

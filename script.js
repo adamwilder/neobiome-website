@@ -182,7 +182,8 @@
           headers: { 'Accept': 'application/json' }
         });
 
-        if (response.ok) {
+        const data = await response.json();
+        if (response.ok && data.success) {
           eoiForm.reset();
           eoiStatus.textContent = 'Thank you — we\'ll be in touch when there\'s something worth sharing.';
           eoiStatus.className = 'eoi-status success';
