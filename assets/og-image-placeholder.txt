@@ -1,0 +1,31 @@
+OG IMAGE INSTRUCTIONS
+─────────────────────
+File needed: /assets/og-image.png
+Dimensions:  1200 × 630 px (LinkedIn / OpenGraph standard)
+
+Suggested content:
+  Background: #F6F4EF (ivory) with a very faint version of the
+              topographic line pattern from the hero
+
+  Centered text:
+    Line 1: "NEOBIOME" — large, split colour:
+            NEO in #3C5E3C (forest), BIOME in #BB8F4E (gold)
+    Line 2: "Research Interviews Open" — smaller, #58545A (graphite)
+    Line 3: "neobiomeresearch.com" — small, #8FAF8C (sage)
+
+  Optional: place the landscape image.png cropped in the lower third
+            with a top fade, similar to the site footer
+
+Quick option — create with Canva (free):
+  1. New design → Custom size → 1200 × 630 px
+  2. Background fill: #F6F4EF
+  3. Add text "NEOBIOME" — Playfair Display Bold, ~100pt
+     Color the N-E-O letters #3C5E3C and B-I-O-M-E letters #BB8F4E
+  4. Subtitle: "Research Interviews Now Open" — 32pt, #58545A
+  5. Export as PNG → save to /assets/og-image.png
+
+Quick option — create with Figma, Adobe Express, or any image editor.
+
+Once the file exists at /assets/og-image.png, LinkedIn and other
+social platforms will pick it up automatically via the og:image
+meta tag already in index.html.
