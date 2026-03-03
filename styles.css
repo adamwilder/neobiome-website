@@ -1259,6 +1259,11 @@ ul  { list-style: none; }
   }
 }
 
+.h-captcha {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .eoi-actions {
   margin-top: 0.4rem;
 }

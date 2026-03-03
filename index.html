@@ -69,6 +69,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Scope: research question blockquote */
+    .scope-blockquote {
+      border-left: 3px solid #BB8F4E;
+      margin: 1.25rem 0 1.5rem;
+      padding: 0.75rem 1.25rem;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: #3C5E3C;
+    }
+
+    /* Your Rights section */
+    .section-rights { background: var(--bg-section, #f9f7f4); }
+    .rights-block { margin-bottom: 1.75rem; }
+    .rights-block h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500;
+      color: #3C5E3C; margin-bottom: 0.5rem; }
+    .rights-block p { font-size: 0.9rem; line-height: 1.72; }
+
+    /* Scrollspy active nav link */
+    .nav-links a.active { opacity: 1; color: #BB8F4E; }
+
+    /* Participate: lead paragraphs (smaller gap than section-intro) */
+    .participate-lead { font-size: 0.93rem; line-height: 1.85; color: var(--graphite);
+      max-width: 600px; margin-bottom: 1.1rem; opacity: 0.88; }
+
+    /* Scope columns: always single-column inside narrow container */
+    .section-inner--narrow .scope-columns { grid-template-columns: 1fr; gap: 2.5rem; }
+
+    /* Participate: "What to expect" block */
+    .participate-expect { margin-top: 2.5rem; padding-top: 2rem;
+      border-top: 1px solid rgba(60,94,60,0.15); }
+    .participate-expect h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem;
+      font-weight: 500; color: #3C5E3C; margin-bottom: 0.75rem; }
+    .participate-expect p { font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.9rem; }
+    .participate-expect p:last-child { margin-bottom: 0; }
+  </style>
 </head>
 <body>
 
@@ -84,6 +122,7 @@
       <li><a href="#scope">Scope</a></li>
       <li><a href="#researcher">Researcher</a></li>
       <li><a href="#participate">Participate</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#stay-informed">Stay Informed</a></li>
     </ul>
@@ -164,29 +203,49 @@
        PROJECT SCOPE
   ══════════════════════════════════════════ -->
   <section id="scope" class="section section-scope">
-    <div class="section-inner">
+    <div class="section-inner section-inner--narrow">
 
       <div class="section-label">Project Scope</div>
       <h2>What this research explores</h2>
 
       <p class="scope-overview">
-        NeoBiome is an independent research initiative investigating the design, governance,
-        and lived experience of intentional eco-communities. This study explores how people
-        integrate regenerative land use, community structures, and emerging technologies to
-        build sustainable, meaningful ways of living — and what those models might teach us
-        about the future.
+        NeoBiome is a practice-based research initiative within my Master of Technological
+        Futures programme at academyEX (New Zealand). It investigates how emerging disruptive
+        technologies might enable the development of decentralised, sustainable, and innovative
+        eco-communities in Aotearoa New Zealand — and what those models might teach us about
+        resilient, meaningful ways of living.
+      </p>
+      <p class="scope-overview">
+        The project responds to a convergence of global and local pressures: the fragility of
+        global supply chains, rapid urbanisation, housing unaffordability, growing ecological
+        crises, and the increasing disconnection between people, land, and community. At the
+        same time, emerging technologies — from renewable energy microgrids and micro-farming
+        innovations to digital governance platforms and smart health systems — present real
+        opportunities to reimagine how communities can live.
       </p>
 
       <div class="scope-columns">
 
         <div class="scope-col">
-          <h3>Areas of inquiry</h3>
+          <h3>The central question</h3>
+          <p>The research is guided by one central question:</p>
+          <blockquote class="scope-blockquote">
+            How might emerging disruptive technologies empower the development of decentralised,
+            sustainable, self-sufficient, and innovative eco-communities in Aotearoa New Zealand?
+          </blockquote>
+          <p>Four sub-questions guide the inquiry:</p>
           <ul class="scope-list">
-            <li>Design principles and governance models of high-functioning eco-communities</li>
-            <li>How residents balance individual autonomy with collective decision-making</li>
-            <li>The role of emerging technologies in community infrastructure and land stewardship</li>
-            <li>Tensions between ecological values and economic sustainability</li>
-            <li>Regenerative agriculture, food systems, and their community contexts</li>
+            <li><strong>Market demand</strong> — Is there demand for decentralised, technology-enabled
+              eco-communities in Aotearoa, and what financial conditions shape their feasibility?</li>
+            <li><strong>Self-sufficiency</strong> — What resources, technologies, and practices are
+              required for self-sufficiency, and what represents an optimal balance for community
+              wellbeing?</li>
+            <li><strong>Technology integration</strong> — Which emerging disruptive technologies could
+              strengthen sustainability, resilience, and social cohesion within an eco-community
+              model?</li>
+            <li><strong>Legal and regulatory framework</strong> — What legal, planning, and locational
+              requirements must be addressed to establish a decentralised, off-grid eco-community in
+              Aotearoa?</li>
           </ul>
         </div>
 
@@ -203,6 +262,7 @@
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -259,11 +319,25 @@
        PARTICIPATE — CONSENT GATE
   ══════════════════════════════════════════ -->
   <section id="participate" class="section section-participate">
-    <div class="section-inner">
+    <div class="section-inner section-inner--narrow">
 
       <div class="section-label">Participate</div>
       <h2>Book a research interview</h2>
 
+      <p class="participate-lead">
+        I&rsquo;m looking for people with lived experience, professional expertise, or genuine
+        curiosity about intentional communities, regenerative living, and the role of technology
+        for local community benefits. Your perspective &mdash; whether as a community founder,
+        a resident, a technologist, a planner, or someone exploring alternative ways of living
+        &mdash; is invaluable to this research.
+      </p>
+      <p class="participate-lead">
+        Sessions are offered as a <strong>45-minute in-depth conversation</strong> or a
+        <strong>10&ndash;15 minute quick exchange</strong> if your time is limited. Both formats
+        are equally valued &mdash; you can indicate your preference when booking. Interviews can
+        be conducted in person (in Aotearoa New Zealand), online via video call, or as part of a
+        site visit to your community where applicable.
+      </p>
       <p class="section-intro">
         To protect your rights as a research participant, please complete the steps below in
         order. The booking link becomes available once you confirm you have read the information
@@ -339,15 +413,139 @@
                  tabindex="-1">
                 Continue to Booking
               </a>
-
-              <p class="consent-note">
-                You will be asked to confirm your consent again before the interview begins.
-              </p>
             </div>
           </div>
         </div>
 
       </div><!-- /consent-gate -->
+
+      <div class="participate-expect">
+        <h3>What to expect</h3>
+        <p>During the interview, I&rsquo;ll ask about your experiences, perspectives, and
+          insights related to eco-community living, technology integration, self-sufficiency,
+          governance, and the opportunities and challenges you&rsquo;ve encountered. The
+          conversation is guided but open &mdash; there are no right or wrong answers, and your
+          unique perspective is what matters most.</p>
+        <p>Topics may include:</p>
+        <ul class="scope-list">
+          <li>Your experience with or interest in eco-community living</li>
+          <li>How technology is (or could be) used in community settings &mdash; for energy,
+            food, water, health, governance, and social connection</li>
+          <li>What self-sufficiency means to you and what trade-offs you consider acceptable</li>
+          <li>Opportunities and barriers to establishing eco-communities in Aotearoa</li>
+          <li>Cultural, financial, and regulatory considerations from your perspective</li>
+        </ul>
+        <p>If you&rsquo;d prefer to share your views in writing, a survey option will also be
+          available &mdash; keep an eye on the Stay Informed section for updates.</p>
+        <p>I welcome informal conversations before you commit to anything. There is no pressure
+          &mdash; my aim is to build genuine, respectful relationships with all participants,
+          guided by the principles of <em>whanaungatanga</em> (relationships) and
+          <em>tino rangatiratanga</em> (self-determination). You can always reach me on my
+          <a href="https://www.linkedin.com/in/wilderadam/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+          or at <a href="mailto:research@neobio.me">research@neobio.me</a>.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION DIVIDER
+  ══════════════════════════════════════════ -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-line"></span>
+    <span class="divider-leaf">&#10022;</span>
+    <span class="divider-line"></span>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       YOUR RIGHTS
+  ══════════════════════════════════════════ -->
+  <section id="your-rights" class="section section-rights">
+    <div class="section-inner section-inner--narrow">
+
+      <div class="section-label">Your Rights</div>
+      <h2>What you should know before participating</h2>
+
+      <p>Before participating in this research, you&rsquo;ll be asked to read the official
+        Participant Information Sheet and submit a Consent Form (Steps 01 and 02 above). Below
+        is a plain-language summary of what&rsquo;s covered &mdash; so you know what to expect
+        before you open those documents.</p>
+
+      <div class="rights-block">
+        <h3>Your participation is entirely voluntary</h3>
+        <ul class="scope-list">
+          <li>You can choose to participate or not, with no consequences either way</li>
+          <li>You may withdraw at any time before data analysis begins (30th May 2026),
+            without giving a reason &mdash; contact
+            <a href="mailto:research@neobio.me">research@neobio.me</a> to withdraw</li>
+          <li>Any data collected from you will be excluded from the study upon request</li>
+        </ul>
+      </div>
+
+      <div class="rights-block">
+        <h3>How your data is used</h3>
+        <ul class="scope-list">
+          <li>Your responses will contribute to the thematic analysis and help shape the
+            Neobiome research project</li>
+          <li>All findings are presented in anonymised and aggregated form &mdash; no individual
+            will be identifiable in the final report or artefact</li>
+          <li>Direct quotes may be used, but only in anonymised form and with your explicit
+            consent</li>
+        </ul>
+      </div>
+
+      <div class="rights-block">
+        <h3>Audio recording</h3>
+        <p>With your explicit consent, the session may be audio-recorded to support accurate
+          note-taking. Recordings are not shared externally and are deleted after transcription
+          is complete.</p>
+      </div>
+
+      <div class="rights-block">
+        <h3>Data storage and security</h3>
+        <p>All research data is managed within a secure Microsoft 365 environment under my
+          direct control:</p>
+        <ul class="scope-list">
+          <li>Dedicated, password-protected SharePoint storage within a Neobiome-specific
+            SharePoint site</li>
+          <li>Microsoft enterprise-level security: multi-factor authentication, encrypted cloud
+            storage, and access logging</li>
+          <li>Data stored on Microsoft&rsquo;s New Zealand-based data centres, supporting local
+            data sovereignty</li>
+          <li>All data accessible only to myself and potentially my academic advisor
+            (Felix Scholz)</li>
+          <li>Audio recordings securely deleted after transcription and verification</li>
+          <li>Data retained for five years in accordance with academyEX research policy, then
+            permanently deleted</li>
+        </ul>
+      </div>
+
+      <div class="rights-block">
+        <h3>Consent process</h3>
+        <p>Consent is obtained digitally through Microsoft Forms (Step 02 above). You will be
+          asked to confirm your consent again verbally before the interview begins. You may
+          withdraw your consent at any time by contacting me directly.</p>
+      </div>
+
+      <div class="rights-block">
+        <h3>Use of AI tools</h3>
+        <p>This research makes limited and transparent use of AI tools as research assistants
+          &mdash; to help synthesise literature, identify themes, and organise data. They do not
+          make interpretive decisions. All reasoning, conclusions, and critical assessments are
+          performed and verified by me. AI outputs are checked for accuracy, bias, and contextual
+          relevance before inclusion.</p>
+      </div>
+
+      <div class="rights-block">
+        <h3>Ethics approval</h3>
+        <p>This study has been approved by academyEX Research, Enterprise and Ethics (REE)
+          Working Group. Ethics Approval Number: <strong>MTF.8888.294</strong>. The research is
+          guided by Kaupapa Māori principles and Te Tiriti o Waitangi, ensuring cultural respect,
+          data sovereignty, and meaningful engagement.</p>
+      </div>
+
     </div>
   </section>
 
@@ -414,6 +612,145 @@
           </div>
         </div>
 
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            What is the NeoBiome project?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>NeoBiome is a research project exploring how emerging disruptive technologies
+              could enable decentralised, sustainable, and innovative eco-communities in Aotearoa
+              New Zealand. It&rsquo;s part of my Master of Technological Futures at academyEX.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            What are &ldquo;emerging disruptive technologies&rdquo;?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>In this research, these are technologies with the potential to reshape how
+              communities function. Examples include solar PV and home batteries, vertical wind
+              turbines, micro-hydro systems, environmentally friendly wastewater treatment,
+              modular and eco-tiny homes, satellite internet, micro-farming and vertical farming
+              innovations, electrified transport, digital governance platforms, and smart health
+              systems.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Is NeoBiome building an actual community?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Not at this stage. This research is conceptual &mdash; it focuses on feasibility
+              analysis, evidence synthesis, and design thinking rather than on-the-ground
+              construction. The output might serve as a foundation for future piloting and
+              development. A detailed technical design and implementation phase would be a
+              separate, subsequent project.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Who is behind this research?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>I&rsquo;m Adam Wilder &mdash; a Master of Technological Futures student at
+              academyEX, supervised by Felix Scholz. My background is in corporate finance,
+              sustainability advisory, and innovation. I bring a personal commitment to exploring
+              how communities can live more sustainably, autonomously, and in closer connection
+              with the natural environment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How does this research relate to Māori values and Te Tiriti o Waitangi?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Kaupapa Māori values are embedded throughout the research as a foundational
+              ethical and cultural framework &mdash; not an add-on. Values such as
+              <em>tino rangatiratanga</em> (self-determination), <em>kaitiakitanga</em>
+              (guardianship), and <em>whanaungatanga</em> (relationships) directly inform the
+              research questions, stakeholder engagement approach, and design principles. The
+              project is guided by the Tiriti principles of partnership, protection, and
+              participation. As a non-Māori researcher, I approach this integration with humility
+              and a commitment to respectful engagement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Why Aotearoa New Zealand?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>New Zealand has a unique combination of characteristics that make it well-suited
+              for exploring eco-community models: geographic isolation that encourages
+              self-reliance, approximately 88% renewable electricity generation, low population
+              density (20 people/km&sup2;), strong environmental values, culturally grounded
+              frameworks like papakāinga housing, and a history of community-level innovation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Who can participate?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>I&rsquo;m looking for eco-village leaders and developers, people interested in
+              or living in eco-communities, technology and sustainability innovators, urban
+              planners, architects, policy makers, and anyone actively exploring a more
+              intentional relationship with land and community. Participation is open whether
+              you&rsquo;re based in New Zealand or internationally.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Will my identity be revealed in the research?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>No. All findings are presented in anonymised and aggregated form. If direct quotes
+              are used, they will be anonymised and only included with your explicit consent. No
+              individual participant will be identifiable in the final report or artefact.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How is AI used in this research?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>AI tools are used transparently as research assistants &mdash; to help synthesise
+              literature, identify themes, and organise data. They do not make interpretive
+              decisions. All reasoning, conclusions, and critical assessments are performed by me.
+              AI outputs are checked for accuracy, bias, and relevance before being used.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How can I get in touch?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" hidden>
+            <p>Email me at <a href="mailto:research@neobio.me">research@neobio.me</a> or reach
+              me out on <a href="https://www.linkedin.com/in/wilderadam/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+              I&rsquo;m happy to have an informal conversation about the project before you
+              decide whether to participate. You can also use the Stay Informed form below to
+              leave your details and follow the project&rsquo;s progress.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -430,7 +767,7 @@
 
       <p class="section-intro">
         Not ready to book an interview, or simply want to follow the project?
-        Leave your details and we&rsquo;ll reach out when there&rsquo;s something
+        Leave your details and I&rsquo;ll reach out when there&rsquo;s something
         worth sharing &mdash; findings, future interview rounds, or publication updates.
         No spam, ever.
       </p>
@@ -464,7 +801,7 @@
 
           <div class="eoi-row">
             <label class="eoi-label" for="eoi-draws">What draws you here <span class="eoi-optional">optional</span></label>
-            <textarea class="eoi-input eoi-textarea" id="eoi-draws" name="draws_you" rows="4" placeholder="Tell us a little about your interest in the project…"></textarea>
+            <textarea class="eoi-input eoi-textarea" id="eoi-draws" name="draws_you" rows="4" placeholder="Tell me a little about your interest in the project…"></textarea>
           </div>
 
           <div class="eoi-row">
@@ -529,7 +866,7 @@
           Your details will be used only to send you updates about this research project.
           To be removed from the list at any time, email
           <a href="mailto:research@neobio.me">research@neobio.me</a>.
-          We do not share your information with third parties.
+          I do not share your information with third parties.
         </p>
 
       </div>
@@ -573,5 +910,36 @@
 
   <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      var navAs = document.querySelectorAll('.nav-links a[href^="#"]');
+      var sections = Array.from(navAs).map(function (a) {
+        return document.querySelector(a.getAttribute('href'));
+      }).filter(Boolean);
+
+      function setActive(id) {
+        navAs.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        }, { rootMargin: '-10% 0px -75% 0px' });
+        sections.forEach(function (s) { observer.observe(s); });
+      } else {
+        var navH = 70;
+        window.addEventListener('scroll', function () {
+          var y = window.scrollY + navH + 10;
+          var active = null;
+          sections.forEach(function (s) { if (s.offsetTop <= y) active = s.id; });
+          if (active) setActive(active);
+        }, { passive: true });
+      }
+    })();
+  </script>
 </body>
 </html>
