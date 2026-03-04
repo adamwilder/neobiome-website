@@ -312,17 +312,7 @@ ul  { list-style: none; }
   gap: 0.5rem;
 }
 
-.status-item--live {
-  padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  background: rgba(154, 168, 77, 0.14);
-  border: 1px solid rgba(154, 168, 77, 0.24);
-  color: var(--forest);
-  box-shadow: 0 8px 24px rgba(60, 94, 60, 0.08);
-}
-
 .status-item--muted {
-  padding-left: 0.9rem;
   font-size: 0.6rem;
   letter-spacing: 0.16em;
   color: rgba(88, 84, 90, 0.68);
@@ -378,6 +368,15 @@ ul  { list-style: none; }
   box-shadow: 0 5px 22px rgba(60, 94, 60, 0.25);
 }
 .btn-primary:active { transform: translateY(0); }
+
+/* Hero interview CTA uses alternate fill color */
+.btn-interview {
+  background: var(--gold);
+}
+
+.btn-interview:hover {
+  background: #a77d42;
+}
 
 /* Ghost — outlined */
 .btn-ghost {
