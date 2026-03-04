@@ -297,12 +297,40 @@ ul  { list-style: none; }
 /* Status indicator */
 .status-row {
   display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
   font-size: 0.67rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sage);
+}
+
+.status-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-item--live {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(154, 168, 77, 0.14);
+  border: 1px solid rgba(154, 168, 77, 0.24);
+  color: var(--forest);
+  box-shadow: 0 8px 24px rgba(60, 94, 60, 0.08);
+}
+
+.status-item--muted {
+  padding-left: 0.9rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  color: rgba(88, 84, 90, 0.68);
+}
+
+.status-dot--muted {
+  background: rgba(88, 84, 90, 0.38) !important;
+  animation: none;
 }
 
 .dot {
