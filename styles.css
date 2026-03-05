@@ -298,17 +298,19 @@ ul  { list-style: none; }
 .status-row {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.65rem;
   font-size: 0.67rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sage);
+  text-align: center;
 }
 
 .status-item {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -1009,6 +1011,15 @@ ul  { list-style: none; }
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 680px) {
   /* Nav: show hamburger, stack links */
+  .site-nav {
+    padding: 0.85rem 1rem;
+  }
+
+  .nav-wordmark {
+    font-size: 0.92rem;
+    letter-spacing: 0.16em;
+  }
+
   .nav-toggle { display: flex; }
 
   .nav-links {
@@ -1036,11 +1047,50 @@ ul  { list-style: none; }
   .nav-links li a:hover { opacity: 1; background: rgba(201, 217, 196, 0.15); }
 
   /* Hero */
-  .hero { padding: 7.5rem 1.5rem 4rem; }
+  .hero {
+    min-height: 92svh;
+    padding: 6.6rem 1.1rem 3.5rem;
+  }
+
+  .label {
+    margin-bottom: 1.4rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.16em;
+    gap: 0.45rem;
+  }
+
+  .label-line {
+    width: 14px;
+  }
+
+  .wordmark {
+    font-size: clamp(2.45rem, 15.5vw, 3.9rem);
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 34ch;
+    margin-bottom: 1.6rem;
+  }
 
   .hero-actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.65rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 340px;
+    align-self: center;
+    justify-content: center;
+    white-space: normal;
+    line-height: 1.25;
+    padding: 0.82em 1.2em;
   }
 
   /* Step layout: stack number above text on small screens */
@@ -1065,8 +1115,8 @@ ul  { list-style: none; }
 
   /* Footer scene shorter on mobile */
   .scene {
-    height: 32vh;
-    min-height: 160px;
+    height: 26vh;
+    min-height: 140px;
   }
 }
 
@@ -1075,6 +1125,18 @@ ul  { list-style: none; }
    RESPONSIVE — Small mobile (≤ 400px)
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 400px) {
+  .site-nav {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.88rem;
+  }
+
   .step-layout {
     flex-direction: column;
     gap: 0.5rem;
@@ -1084,6 +1146,48 @@ ul  { list-style: none; }
     text-align: left;
     font-size: 1.4rem;
     width: auto;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — Very small mobile (≤ 360px)
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+  .hero {
+    min-height: 90svh;
+    padding: 5.7rem 0.9rem 2.8rem;
+  }
+
+  .label {
+    font-size: 0.52rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 1.15rem;
+  }
+
+  .wordmark {
+    font-size: clamp(2.15rem, 14vw, 3.1rem);
+    letter-spacing: 0.03em;
+  }
+
+  .hero-tagline {
+    font-size: 0.84rem;
+    line-height: 1.58;
+    margin-bottom: 1.3rem;
+  }
+
+  .hero-actions .btn {
+    font-size: 0.76rem;
+    padding: 0.78em 1em;
+    max-width: 312px;
+  }
+
+  .status-row {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .status-item--muted {
+    font-size: 0.57rem;
   }
 }
 
