@@ -145,60 +145,16 @@
 
 
   /* ──────────────────────────────────────────
-     7. STAY INFORMED — toggle + Formspree submit
+     7. STAY INFORMED — toggle
   ────────────────────────────────────────── */
   const eoiToggle   = document.getElementById('eoi-toggle');
   const eoiCollapse = document.getElementById('eoi-collapse');
-  const eoiForm     = document.getElementById('eoi-form');
-  const eoiStatus   = document.getElementById('eoi-status');
-  const eoiSubmit   = document.getElementById('eoi-submit');
 
-  // Toggle open/close
   if (eoiToggle && eoiCollapse) {
     eoiToggle.addEventListener('click', function () {
       const isOpen = eoiCollapse.classList.toggle('open');
       eoiToggle.setAttribute('aria-expanded', String(isOpen));
       eoiCollapse.setAttribute('aria-hidden', String(!isOpen));
-      if (isOpen) {
-        // Focus first field when opening
-        const first = eoiCollapse.querySelector('input, textarea');
-        if (first) setTimeout(function () { first.focus(); }, 420);
-      }
-    });
-  }
-
-  // AJAX submit
-  if (eoiForm && eoiStatus) {
-    eoiForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      eoiSubmit.disabled = true;
-      eoiSubmit.textContent = 'Sending…';
-
-      try {
-        const response = await fetch(eoiForm.action, {
-          method: 'POST',
-          body: new FormData(eoiForm),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        const data = await response.json();
-        if (response.ok && data.success) {
-          eoiForm.reset();
-          eoiStatus.textContent = 'Thank you — we\'ll be in touch when there\'s something worth sharing.';
-          eoiStatus.className = 'eoi-status success';
-          eoiStatus.hidden = false;
-          eoiSubmit.hidden = true;
-        } else {
-          throw new Error('server error');
-        }
-      } catch {
-        eoiStatus.textContent = 'Something went wrong. Please try again or email research@neobio.me directly.';
-        eoiStatus.className = 'eoi-status error';
-        eoiStatus.hidden = false;
-        eoiSubmit.disabled = false;
-        eoiSubmit.textContent = 'Send my details';
-      }
     });
   }
 

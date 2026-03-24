@@ -678,95 +678,27 @@
         No spam, ever.
       </p>
 
-      <!-- Toggle button — form is closed by default -->
+      <!-- Toggle button -->
       <button class="btn btn-gold eoi-toggle" id="eoi-toggle" aria-expanded="false" aria-controls="eoi-collapse">
         Stay in the loop
         <span class="eoi-toggle-arrow" aria-hidden="true">&#8964;</span>
       </button>
 
-      <!-- Collapsible form panel -->
+      <!-- Collapsible panel -->
       <div class="eoi-collapse" id="eoi-collapse" aria-hidden="true">
 
-        <form class="eoi-form" id="eoi-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="03b87c00-3aff-4096-859a-39021b20fe11" />
-
-          <div class="eoi-row">
-            <label class="eoi-label" for="eoi-name">Name <span class="eoi-required" aria-hidden="true">*</span></label>
-            <input class="eoi-input" id="eoi-name" name="name" type="text" required placeholder="Your name" autocomplete="name" />
-          </div>
-
-          <div class="eoi-row">
-            <label class="eoi-label" for="eoi-email">Email <span class="eoi-required" aria-hidden="true">*</span></label>
-            <input class="eoi-input" id="eoi-email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" />
-          </div>
-
-          <div class="eoi-row">
-            <label class="eoi-label" for="eoi-org">Organisation <span class="eoi-optional">optional</span></label>
-            <input class="eoi-input" id="eoi-org" name="organisation" type="text" placeholder="e.g. university, community, company" />
-          </div>
-
-          <div class="eoi-row">
-            <label class="eoi-label" for="eoi-draws">What draws you here <span class="eoi-optional">optional</span></label>
-            <textarea class="eoi-input eoi-textarea" id="eoi-draws" name="draws_you" rows="4" placeholder="Tell me a little about your interest in the project…"></textarea>
-          </div>
-
-          <div class="eoi-row">
-            <span class="eoi-label">Areas of interest <span class="eoi-optional">optional</span></span>
-            <div class="eoi-check-grid">
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Eco-villages / Community building" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Eco-villages / Community building</span>
-              </label>
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Technology adaptation" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Technology adaptation</span>
-              </label>
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Policy / Legal" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Policy / Legal</span>
-              </label>
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Housing / Infrastructure" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Housing / Infrastructure</span>
-              </label>
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Energy systems" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Energy systems</span>
-              </label>
-              <label class="eoi-check-item">
-                <input type="checkbox" name="interest" value="Food systems" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Food systems</span>
-              </label>
-              <label class="eoi-check-item eoi-check-other">
-                <input type="checkbox" name="interest" value="Other" id="interest-other-check" />
-                <span class="eoi-check-box" aria-hidden="true"></span>
-                <span>Other</span>
-              </label>
-            </div>
-            <input class="eoi-input eoi-other-input" id="interest-other-text" name="interest_other"
-                   type="text" placeholder="Please specify…" hidden />
-          </div>
-
-          <!-- Honeypot — hidden from humans, catches bots -->
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-
-          <div class="h-captcha" data-captcha="true"></div>
-
-          <div class="eoi-actions">
-            <button type="submit" class="btn btn-gold" id="eoi-submit">
-              Send my details
-            </button>
-          </div>
-
-          <p class="eoi-status" id="eoi-status" aria-live="polite" hidden></p>
-
-        </form>
+        <div class="eoi-msforms-wrap">
+          <iframe
+            id="eoi-msforms"
+            src="https://forms.office.com/e/MFmJyWk4nh?embed=true"
+            title="Stay in the loop — Microsoft Form"
+            class="eoi-msforms-frame"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            allowfullscreen
+          ></iframe>
+        </div>
 
         <p class="eoi-privacy">
           Your details will be used only to send you updates about this research project.
@@ -816,7 +748,7 @@
 
   <script data-goatcounter="https://neobiome.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
-  <script src="https://web3forms.com/client/script.js" async defer></script>
+
   <script src="script.js"></script>
   <script>
     (function () {
